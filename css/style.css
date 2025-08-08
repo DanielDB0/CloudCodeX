@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin-left: 70px;
+}
+
+.banner{
+    background-color: blue;
+}
+
+#sobre{
+    padding-right: 50%;
+}
+
+#missao{
+}
+
+#visao{
+}
+
+#valores{
+}
+
+#equipe{
+}
+
+#portifolio{
+}
+
+#contato{
+}
+
+#sobre{
+    padding-bottom: 30px;
+}
+
+.dexplain1{
+    width: 50%;
+    padding-right: 100px;
+    padding-bottom: 30px;
+}
+
+.pexplain{
+    font-size: 26px;
+    text-align: justify;
+}
+
+.dlist{
+    width: 50%;
+}
+
+.sections{
+    display: flex;
+}
+
+#TopoPagina{
+    position: relative;
+    width: 100%;
+}
+
+.banner{
+    margin-left: -70px;
+}
+
+.welcome{
+    color: white;
+    margin-left: 65px;
+}
+
+#welcome{
+
+}
+
+h2{
+    color: #202D9C;
+}
