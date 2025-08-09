@@ -3,13 +3,8 @@
     padding: 0;
 }
 
-body{
-    margin-left: 70px;
-}
-
 #banner{
     padding-top: 70px;
-    margin-left: -70px;
     position: relative;
     z-index: 1;
 }
@@ -18,19 +13,13 @@ body{
     padding-right: 50%;
 }
 
-#missao{
-}
-
-#visao{
-}
-
-#valores{
-}
-
-#equipe{
-}
-
 #portifolio{
+    width: 100%;
+    background-color: #202D9C;
+    color: white;
+    margin-left: -70px;
+    padding-left: 70px;
+    padding-bottom: 20px;
 }
 
 #contato{
@@ -84,7 +73,7 @@ body{
 }
 
 .title2{
-    color: black;
+    color: white;
     font-size: 40px;
 }
 
@@ -92,11 +81,10 @@ body{
     display: inline-flex;
     height: 70px;
     padding: 20px;
-    padding-left: 430px;
+    padding-left: 400px;
 }
 
-#header{
-    margin-left: -70px;
+#header{            
     background-color: white;
     width: 100%;
     display: flex;  
@@ -127,4 +115,37 @@ body{
 
 #container{
     padding-top: 20px;
+    padding-left: 70px;
+}
+
+.perfil{
+    overflow: hidden;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    margin: 1.5%;
+    display: flex;
+    border: 5px solid black;
+}
+
+.divPerfil{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.imgPerfil{
+    width: 300px;
+    height: 300px;    
+}
+
+#cardPort{
+    background-color: blue;
+    border-radius: 1%;
+    height: 600px;
+    margin-right: 70px;
+}
+
+footer{
+    background-color: #202D9C;
 }
