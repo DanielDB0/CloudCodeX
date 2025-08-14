@@ -1,12 +1,14 @@
 *{
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 #banner{
     padding-top: 70px;
     position: relative;
     z-index: 1;
+    background-color: #090d19;
 }
 
 #sobre{
@@ -15,7 +17,7 @@
 
 #portifolio{
     width: 100%;
-    background-color: #202D9C;
+    background-color: #090d19;
     color: white;
     margin-left: -70px;
     padding-left: 70px;
@@ -31,22 +33,20 @@
 
 .dexplain1{
     width: 50%;
-    padding-right: 100px;
     padding-bottom: 30px;
 }
 
 .pexplain{
-    font-size: 26px;
+    font-size: 20px;
     text-align: justify;
     padding-top: 10px;
 }
 
-.dlist{
-    width: 50%;
-}
-
-.sections{
-    display: flex;
+.cards{
+    background-image: linear-gradient(#0147A6, #0068B2, #0297C2);
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 500px;
 }
 
 #TopoPagina{
@@ -68,7 +68,7 @@
 }
 
 .title1{
-    color: #202D9C;
+    color: #01ACCA;
     font-size: 40px;
 }
 
@@ -116,6 +116,8 @@
 #container{
     padding-top: 20px;
     padding-left: 70px;
+    padding-right: 70px;
+    background-color: #090d19;
 }
 
 .perfil{
@@ -123,9 +125,9 @@
     border-radius: 100%;
     width: 300px;
     height: 300px;
-    margin: 1.5%;
     display: flex;
     border: 5px solid black;
+    margin-bottom: 30px;
 }
 
 .divPerfil{
@@ -136,16 +138,28 @@
 
 .imgPerfil{
     width: 300px;
-    height: 300px;    
+    height: 300px;
 }
 
 #cardPort{
-    background-color: blue;
     border-radius: 1%;
     height: 600px;
     margin-right: 70px;
 }
 
 footer{
-    background-color: #202D9C;
+    background-color: #090d19;
+}
+
+.divPerfil1{
+    margin: 1.5%;
+    text-align: center;
+}
+
+.nomeMembro{
+    font-size: 30px;
+}
+
+#MVV{
+    display: flex;    
 }
