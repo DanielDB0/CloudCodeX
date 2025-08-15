@@ -4,6 +4,10 @@
     color: white;
 }
 
+html{
+    scroll-behavior: smooth;    
+}
+
 #banner{
     padding-top: 70px;
     position: relative;
