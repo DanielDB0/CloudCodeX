@@ -1,5 +1,4 @@
-let card = 
-`
+let card = `
 <div class="cards">
     <div class="dexplain1">
         <h2 class="title1">---</h2>
@@ -14,6 +13,27 @@ let cardContent = ['Nosso objetivo é desenvolver soluções tecnológicas de al
 
 const MVV = document.querySelector("#MVV")
 
-for(i=0; i++; i<3){
+for(let i = 0; i < 3; i++){
     MVV.innerHTML += card.replace('---', cardTitles[i]).replace('+++', cardContent[i])
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+const allPerfil = document.querySelectorAll('.divPerfil1')
+
+let perfil = `
+<div class="perfil">
+    <img src="img/Daniel.jpg" alt="---" class="imgPerfil">
+</div>
+<h3 class="nomeMembro">+++</h3>
+`
+
+const PersonsList = [
+    ['Juliana', 'da Silva Oliveira'],
+    ['Isaque', 'Sérgio da Silva'],
+    ['Giovani', 'Amorim de Sousa'],
+    ['Daniel', 'Dias Bueno'],
+    ['Rafael', 'Henrique Oliveira Rocha']
+]
+
+for(let i = 0; i < 5; i++){
+    allPerfil[i].innerHTML += perfil.replace('+++', `${PersonsList[i][0]} ${PersonsList[i][1]}`).replaceAll('---', PersonsList[i][0])
 }
