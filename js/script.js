@@ -1,3 +1,5 @@
+//Missão, Visão e Valores
+
 let card = `
 <div class="cards">
     <div class="dexplain1">
@@ -23,6 +25,7 @@ for(let i = 0; i < 3; i++){
     MVV.innerHTML += card.replace('---', cardTitles[i]).replace('+++', cardContent[i]).replace('###', KeyWordsCard[i])
 }
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
+//Cards Extras
 
 card = `
 <div class="cards1">
@@ -46,26 +49,22 @@ let ExtraCardContent = [['Hospedagem segura e suporte técnico especializado.',
 
 const BothMoreCards = document.querySelectorAll("#MoreCards")
 
-for(let i = 0; i < 3; i++){
-    BothMoreCards[0].innerHTML += card.replace('---', ExtraCardTitles[0][i]).replace('+++', ExtraCardContent[0][i])
+
+for(let i = 0; i < BothMoreCards.length; i++){
+        for(let j = 0; j < ExtraCardTitles[i].length; j++){
+        BothMoreCards[i].innerHTML += card.replace('---', ExtraCardTitles[i][j]).replace('+++', ExtraCardContent[i][j])
+    }
 }
-
-for(let i = 0; i < 3; i++){
-    BothMoreCards[1].innerHTML += card.replace('---', ExtraCardTitles[1][i]).replace('+++', ExtraCardContent[1][i])
-}
-
-
-
-
-
 
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
+//Equipe
+
 const allPerfil = document.querySelectorAll('.divPerfil1')
 
 let perfil = `
 <div class="perfil">
-    <img src="img/Daniel.jpg" alt="---" class="imgPerfil">
+<img src="img/Daniel.jpg" alt="---" class="imgPerfil">
 </div>
 <h3 class="nomeMembro">+++</h3>
 `
@@ -82,3 +81,25 @@ for(let i = 0; i < 5; i++){
     allPerfil[i].innerHTML += perfil.replace('+++', `${PersonsList[i][0]} ${PersonsList[i][1]}`).replaceAll('---', PersonsList[i][0])
 }
 
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+//Portifólio
+
+let languages = ['html','css','js']
+const Language = document.querySelector('#Languages')
+
+for (let i = 0; i < languages.length; i++) {
+    l = languages[i]
+    Language.innerHTML += `<img src="img/${l}.png" alt="${l}" class="Language">`  
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+//Contatos
+
+let contatos = ['Av. Brig. Faria Lima, 8152 - Itaim Bibi','(11) 90955-4872','cloudcodex@gmail.com']
+const TxtContato = document.querySelector('#TxtContato')
+
+for (let i = 0; i < contatos.length; i++) {
+    TxtContato.innerHTML += `<p class="pContato">${contatos[i]}</p>`
+}
