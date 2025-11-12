@@ -18,6 +18,16 @@ html{
 #sobre{
 }
 
+<<<<<<< HEAD
+=======
+#portifolio{
+    width: 100%;
+    color: white;
+    margin-left: -70px;
+    padding-left: 70px;
+    padding-bottom: 20px;
+}
+>>>>>>> 41e3c4a3c5ef1b8ad3d4d680d48c5025524df930
 
 #contato{
     display: flex;
@@ -202,6 +212,7 @@ html{
     padding-right: 10px;
     padding-bottom: 10px;
     width: 90%;
+<<<<<<< HEAD
     text-align: center;
     border-radius: 15%;
     overflow: hidden;
@@ -222,6 +233,8 @@ html{
 
 #cardPortLeft{
     width: 30%;
+=======
+>>>>>>> 41e3c4a3c5ef1b8ad3d4d680d48c5025524df930
 }
 
 footer{
@@ -240,6 +253,15 @@ footer{
 #MVV{
     display: flex;
     margin-top: 50px;
+<<<<<<< HEAD
+=======
+    margin-bottom: 50px;
+}
+
+#MoreCards{
+    display: flex;
+    margin-top: 50px;
+>>>>>>> 41e3c4a3c5ef1b8ad3d4d680d48c5025524df930
     margin-bottom: 50px;
 }
 
