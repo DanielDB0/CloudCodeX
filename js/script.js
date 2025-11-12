@@ -2,20 +2,64 @@ let card = `
 <div class="cards">
     <div class="dexplain1">
         <h2 class="title1">---</h2>
-        <p class="pexplain">
+        <b class="pexplainCard defaultMarginText">
+            ###
+        </b>
+        <p class="pexplainCard">
             +++
         </p>
     </div>
 </div>
 `
-let cardTitles = ['Nossa Missão', 'Nossa Visão', 'Nossos Valores']
-let cardContent = ['Nosso objetivo é desenvolver soluções tecnológicas de alto nível, impulsionando o crescimento e a competitividade das empresas. Através da qualidade, inovação digital e um compromisso constante com a excelência, capacitamos negócios a prosperar em um mercado cada vez mais dinâmico e exigente.', 'Alcançar reconhecimento global pela excelência, desenvolvendo soluções inovadoras que impulsionam a transformação dos negócios, otimizam processos e geram valor sustentável para empresas e sociedade.', 'Promovemos a inovação com base em princípios sólidos, como ética, colaboração, transparência e segurança, garantindo soluções sustentáveis e de alta qualidade que geram impacto positivo para empresas e sociedade.']
+let cardTitles = ['Missão', 'Visão', 'Valores']
+let cardContent = ['soluções tecnológicas de alto nível, capacitando empresas a prosperar por meio da qualidade e inovação digital.',
+'reconhecimento global pela excelência, criando soluções transformando negócios e gerando valor.', 
+'pela ética, colaboração, transparência, segurança, sustentabilidade e qualidade.']
+let KeyWordsCard = ['Desenvolver', 'Ter', 'Inovação']
 
 const MVV = document.querySelector("#MVV")
 
 for(let i = 0; i < 3; i++){
-    MVV.innerHTML += card.replace('---', cardTitles[i]).replace('+++', cardContent[i])
+    MVV.innerHTML += card.replace('---', cardTitles[i]).replace('+++', cardContent[i]).replace('###', KeyWordsCard[i])
 }
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+card = `
+<div class="cards1">
+    <div class="dexplain1">
+        <h2 class="title3">---</h2>
+        <p class="pexplainCard">
+            +++
+        </p>
+    </div>
+</div>
+`
+let ExtraCardTitles = [['Hospedagem e Manutenção', 'Desenvolvimento de sites', 'Aplicativos Móveis'],
+['Outsourcing Team','Serviços de design UX-UI','Inception']]
+let ExtraCardContent = [['Hospedagem segura e suporte técnico especializado.',
+'Desenvolvimento Customizado e suporte pós lançamento', 
+'Aplicativos personalizados, Design intuitivo, Para celulares e tablets e Multiplataforma para iOS e Android.'],
+['Nossos profissionais experientes e alinhados às suas necessidades, nosso time externo se integra perfeitamente ao seu projeto',
+'Experiências digitais intuitivas, funcionais e visualmente atraentes',
+'Conectar os objetivos de negócio com as reais necessidades do usuário']]
+
+
+const BothMoreCards = document.querySelectorAll("#MoreCards")
+
+for(let i = 0; i < 3; i++){
+    BothMoreCards[0].innerHTML += card.replace('---', ExtraCardTitles[0][i]).replace('+++', ExtraCardContent[0][i])
+}
+
+for(let i = 0; i < 3; i++){
+    BothMoreCards[1].innerHTML += card.replace('---', ExtraCardTitles[1][i]).replace('+++', ExtraCardContent[1][i])
+}
+
+
+
+
+
+
+
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 const allPerfil = document.querySelectorAll('.divPerfil1')
 
@@ -37,3 +81,4 @@ const PersonsList = [
 for(let i = 0; i < 5; i++){
     allPerfil[i].innerHTML += perfil.replace('+++', `${PersonsList[i][0]} ${PersonsList[i][1]}`).replaceAll('---', PersonsList[i][0])
 }
+
