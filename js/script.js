@@ -25,10 +25,7 @@ for(let i = 0; i < 3; i++){
     MVV.innerHTML += card.replace('---', cardTitles[i]).replace('+++', cardContent[i]).replace('###', KeyWordsCard[i])
 }
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
-<<<<<<< HEAD
 //Cards Extras
-=======
->>>>>>> 41e3c4a3c5ef1b8ad3d4d680d48c5025524df930
 
 card = `
 <div class="cards1">
@@ -52,7 +49,6 @@ let ExtraCardContent = [['Hospedagem segura e suporte técnico especializado.',
 
 const BothMoreCards = document.querySelectorAll("#MoreCards")
 
-<<<<<<< HEAD
 
 for(let i = 0; i < BothMoreCards.length; i++){
         for(let j = 0; j < ExtraCardTitles[i].length; j++){
@@ -64,23 +60,6 @@ for(let i = 0; i < BothMoreCards.length; i++){
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 //Equipe
 
-=======
-for(let i = 0; i < 3; i++){
-    BothMoreCards[0].innerHTML += card.replace('---', ExtraCardTitles[0][i]).replace('+++', ExtraCardContent[0][i])
-}
-
-for(let i = 0; i < 3; i++){
-    BothMoreCards[1].innerHTML += card.replace('---', ExtraCardTitles[1][i]).replace('+++', ExtraCardContent[1][i])
-}
-
-
-
-
-
-
-
-/*-------------------------------------------------------------------------------------------------------------------------------------------*/
->>>>>>> 41e3c4a3c5ef1b8ad3d4d680d48c5025524df930
 const allPerfil = document.querySelectorAll('.divPerfil1')
 
 let perfil = `
@@ -102,7 +81,6 @@ for(let i = 0; i < 5; i++){
     allPerfil[i].innerHTML += perfil.replace('+++', `${PersonsList[i][0]} ${PersonsList[i][1]}`).replaceAll('---', PersonsList[i][0])
 }
 
-<<<<<<< HEAD
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 //Portifólio
@@ -125,5 +103,3 @@ const TxtContato = document.querySelector('#TxtContato')
 for (let i = 0; i < contatos.length; i++) {
     TxtContato.innerHTML += `<p class="pContato">${contatos[i]}</p>`
 }
-=======
->>>>>>> 41e3c4a3c5ef1b8ad3d4d680d48c5025524df930
