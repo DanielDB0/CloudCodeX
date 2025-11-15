@@ -30,7 +30,7 @@ for(let i = 0; i < 3; i++){
 card = `
 <div class="cards1">
     <div class="dexplain1">
-        <h2 class="title3">---</h2>
+        <h2 class="title2">---</h2>
         <p class="pexplainCard">
             +++
         </p>
@@ -103,3 +103,30 @@ const TxtContato = document.querySelector('#TxtContato')
 for (let i = 0; i < contatos.length; i++) {
     TxtContato.innerHTML += `<p class="pContato">${contatos[i]}</p>`
 }
+
+
+
+
+const cards = document.querySelectorAll('.cards');
+const cards1 = document.querySelectorAll('.cards1');
+const clients = document.querySelectorAll('#clients');
+const dLanguages = document.querySelectorAll('#dLanguages');
+const clientSite = document.querySelectorAll('#clientSite');
+
+    // Create Intersection Observer
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show'); // Reveal card
+                observer.unobserve(entry.target); // Stop observing once shown
+            }
+        });
+    }, { threshold: 0.2 }); // Trigger when 20% visible
+
+    // Observe each card
+    cards.forEach(card => observer.observe(card));
+    cards1.forEach(card => observer.observe(card));
+    clients.forEach(card => observer.observe(card));
+    dLanguages.forEach(card => observer.observe(card));
+    clientSite.forEach(card => observer.observe(card));
+
