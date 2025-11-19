@@ -8,6 +8,10 @@ html{
     scroll-behavior: smooth;    
 }
 
+main{
+z-index: 1;
+}
+
 #header{            
     background-color: #090d19;
     width: 100%;
@@ -290,23 +294,25 @@ footer{
 
 #contato{
     display: flex;
-    margin-top: 500px;
+    margin-top: 70px;
 }
 
 .pContato{
     font-size: 30px;
+    margin-left: 30px;
 }
 
 #allRights{
     padding-left: 60px;
     padding-right: 60px;
     font-size: 30px;
-    padding-top: 25px;
+    padding-top: 60px;
 }
 
 #redes{
     display: flex;
-    padding-left: 140px;
+    padding-left: 110px;
+    margin: 30px;
 }
 
 .imgRede{
@@ -314,4 +320,14 @@ footer{
     width: 80px;
 }
 
+#whatsapp{
+position: fixed;
+right: 20px;
+bottom: 110px;
+z-index: 4;
+}
+
+#imgZap{
+width: 90px;
+}
 
