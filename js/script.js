@@ -64,7 +64,7 @@ const allPerfil = document.querySelectorAll('.divPerfil1')
 
 let perfil = `
 <div class="perfil">
-<img src="img/Daniel.jpg" alt="---" class="imgPerfil">
+<img src="img/---.jpg" alt="---" class="imgPerfil">
 </div>
 <h3 class="nomeMembro">+++</h3>
 `
