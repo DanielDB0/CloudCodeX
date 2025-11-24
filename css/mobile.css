@@ -208,4 +208,13 @@
         padding-top: 10px;
         width: 40px;
     }
+
+    #imgZap{
+        width: 70px;
+    }
+
+    #whatsapp{
+        bottom: 20px;
+        right: 10px;
+    }
 }

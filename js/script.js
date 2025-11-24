@@ -83,7 +83,7 @@ for(let i = 0; i < 5; i++){
 
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
-//Portifólio
+//Linguagens
 
 let languages = ['html','css','js']
 const Language = document.querySelector('#Languages')

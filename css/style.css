@@ -52,7 +52,7 @@ z-index: 1;
     padding-top: 70px;
     position: relative;
     z-index: 1;
-    background-image: linear-gradient(to right, #02aedf, #0c468a, #0c468a);
+    background-color:#090d19;
 }
 
 #TopoPagina{
@@ -76,7 +76,7 @@ z-index: 1;
     padding-top: 20px;
     padding-left: 70px;
     padding-right: 70px;
-    background-image: linear-gradient(to right, #02aedf, #0c468a, #0c468a);
+    background-image: linear-gradient(to bottom, #090d19, #02aedf, #02aedf, #0c468a, #02aedf, #0c468a, #090d19);
 }
 
 #sobre{
@@ -206,7 +206,6 @@ z-index: 1;
 
 #dLanguages{
     width: 100%;
-    margin-left: 5%;
     margin-top: 70px;
     opacity: 0;
     transform: translateY(50px);
@@ -224,6 +223,7 @@ z-index: 1;
 
 .Language{
     padding-right: 30px;
+    width: 100px;
 }
 
 #cardPortRight{
@@ -239,7 +239,6 @@ z-index: 1;
     text-align: center;
     border-radius: 15%;
     overflow: hidden;
-    background-color: #000;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1.4s ease-out, transform 1.4s ease-out;
@@ -252,6 +251,8 @@ z-index: 1;
 
 .imgSiteClient{
     height: 620px;
+    border-radius: 5%;
+    overflow: hidden;
 }
 
 #equipe{
