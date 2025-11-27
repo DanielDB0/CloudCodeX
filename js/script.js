@@ -3,7 +3,7 @@
 let card = `
 <div class="cards">
     <div class="dexplain1">
-        <h2 class="title1">---</h2>
+        <h2 class="title3">---</h2>
         <b class="pexplainCard defaultMarginText">
             ###
         </b>
@@ -85,11 +85,12 @@ for(let i = 0; i < 5; i++){
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 //Linguagens
 
-let languages = ['html','css','js']
+let languages = ['html','js','css', 'c', 'C-Sharp', 'c++', 'java', 'python']
 const Language = document.querySelector('#Languages')
 
 for (let i = 0; i < languages.length; i++) {
     l = languages[i]
+    //Language.innerHTML += `<div class="linguagem"><img src="img/${l}.png" alt="${l}" class="Language"><p>${l}</p></div>`  
     Language.innerHTML += `<img src="img/${l}.png" alt="${l}" class="Language">`  
 }
 
