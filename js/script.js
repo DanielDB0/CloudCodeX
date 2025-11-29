@@ -117,7 +117,7 @@ for (let i = 0; i < languages.length; i++) {
 
 //Criando um vetor bidimensional com os nomes das imagens, textos das formas de contato e sobrenomes links.
 let contatos = [
-    ['email', 'localizacao', 'instagram'],
+    ['email', 'localizacao', 'Instagram'],
     ['cloudcodexx@gmail.com', 'Av. Brig. Faria Lima, 8152 - Itaim Bibi', '@cloudcodexx'],
     ['mailto:cloudcodexx@gmail.com',
         'https://www.google.com/maps/place/Av.+Brig.+Faria+Lima,+8152+-+Itaim+Bibi,+S%C3%A3o+Paulo+-+SP,+04538-133/@-23.5890257,-46.68386,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce574496c8b241:0x11f49cdc2643de13!8m2!3d-23.5890257!4d-46.6812851?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D',
@@ -159,7 +159,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     cards.forEach(card => observer.observe(card));
     cards1.forEach(card => observer.observe(card));
     dLanguages.forEach(card => observer.observe(card));
-      
+
     
     /*------------------------------------------------------------------------------------------------*/
     //Carrossel Portifólio
