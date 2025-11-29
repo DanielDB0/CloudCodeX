@@ -60,25 +60,27 @@ for(let i = 0; i < BothMoreCards.length; i++){
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 //Equipe
 
-const allPerfil = document.querySelectorAll('.divPerfil1')
+const allPerfil = document.querySelector('.divPerfil')
 
 let perfil = `
+<div class="divPerfil1">
 <div class="perfil">
 <img src="img/---.jpg" alt="---" class="imgPerfil">
 </div>
 <h3 class="nomeMembro">+++</h3>
+</div>
 `
 
 const PersonsList = [
-    ['Juliana', 'da Silva Oliveira'],
-    ['Isaque', 'Sérgio da Silva'],
-    ['Giovani', 'Amorim de Sousa'],
     ['Daniel', 'Dias Bueno'],
-    ['Rafael', 'Henrique Oliveira Rocha']
+    ['Giovani', 'A. de Sousa'],
+    ['Isaque', 'Sérgio da Silva'],
+    ['Juliana', 'da Silva Oliveira'],
+    ['Rafael', 'H. O. Rocha']
 ]
 
 for(let i = 0; i < 5; i++){
-    allPerfil[i].innerHTML += perfil.replace('+++', `${PersonsList[i][0]} ${PersonsList[i][1]}`).replaceAll('---', PersonsList[i][0])
+    allPerfil.innerHTML += perfil.replace('+++', `${PersonsList[i][0]} ${PersonsList[i][1]}`).replaceAll('---', PersonsList[i][0])
 }
 
 
@@ -98,11 +100,20 @@ for (let i = 0; i < languages.length; i++) {
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 //Contatos
 
-let contatos = ['Av. Brig. Faria Lima, 8152 - Itaim Bibi','(11) 90955-4872','cloudcodex@gmail.com']
+let contatos = [
+    ['email', 'localizacao', 'instagram'],
+    ['cloudcodexx@gmail.com', 'Av. Brig. Faria Lima, 8152 - Itaim Bibi', '@cloudcodexx'],
+    ['mailto:cloudcodexx@gmail.com',
+    'https://www.google.com/maps/place/Av.+Brig.+Faria+Lima,+8152+-+Itaim+Bibi,+S%C3%A3o+Paulo+-+SP,+04538-133/@-23.5890257,-46.68386,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce574496c8b241:0x11f49cdc2643de13!8m2!3d-23.5890257!4d-46.6812851?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D',
+    'https://www.instagram.com/cloudcodexx/'
+    ]
+]
 const TxtContato = document.querySelector('#TxtContato')
 
-for (let i = 0; i < contatos.length; i++) {
-    TxtContato.innerHTML += `<p class="pContato">${contatos[i]}</p>`
+for (let i = 0; i < contatos[0].length; i++) {
+    TxtContato.innerHTML += `
+    <div id="contatoConj"><a href="${contatos[2][i]}"><img src="img/${contatos[0][i]}.png" alt="${contatos[0][i]}" class="imgRede"></a>
+    <a href="${contatos[2][i]}"><p class="pContato">${contatos[1][i]}</p></a></div>`
 }
 
 
@@ -127,7 +138,37 @@ const clientSite = document.querySelectorAll('#clientSite');
     // Observe each card
     cards.forEach(card => observer.observe(card));
     cards1.forEach(card => observer.observe(card));
-    clients.forEach(card => observer.observe(card));
     dLanguages.forEach(card => observer.observe(card));
-    clientSite.forEach(card => observer.observe(card));
 
+/*------------------------------------------------------------------------------------------------*/
+//Carrossel Portifólio
+
+let Client = `
+<div id="clientSite">
+    <img src="img/+++.png" alt="SITE ---" class="imgSiteClient"/>
+    <div id="nameClient"><b id="pNameClient">---</b></div>
+</div>
+`
+
+const DivClient = document.querySelector('#cardPortRight')
+
+
+
+let img = ['ballerflix', 'cineclipse', 'tysche'];
+let i = 0;
+let time = 5000;
+
+function slideShow() {
+
+    DivClient.innerHTML = Client.replaceAll('---', img[i].toUpperCase()).replace('+++', img[i])
+
+    i++;
+
+     if (i == img.length) {
+    i = 0;
+  }
+
+  setTimeout('slideShow()', time);
+}
+
+slideShow();

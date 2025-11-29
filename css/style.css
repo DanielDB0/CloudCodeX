@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yeseva+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap');
 
 *{
     margin: 0;
@@ -16,7 +18,7 @@ main{
 z-index: 1;
 }
 
-#header{            
+header{            
     background-color: #090d19;
     width: 100%;
     display: flex;  
@@ -81,7 +83,20 @@ z-index: 1;
     padding-top: 20px;
     padding-left: 70px;
     padding-right: 70px;
-    background-image: linear-gradient(to bottom, #090d19, #02aedf, #02aedf, #0c468a, #02aedf, #0c468a, #090d19);
+    background-image: linear-gradient(to bottom,
+     #090d19, 
+     #090d19, 
+     #0c468a, 
+     #02aedf, 
+     #0c468a, 
+     #090d19, 
+     #090d19, 
+     #090d19, 
+     #090d19, 
+     #090d19, 
+     #090d19, 
+     #090d19, 
+     #090d19);
 }
 
 #sobre{
@@ -121,6 +136,7 @@ z-index: 1;
     display: flex;
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-left: calc((100% - 1720px)/2);
 }
 
 .cards{
@@ -143,6 +159,7 @@ z-index: 1;
 .dexplain1{
     padding: 30px;
     padding-bottom: 30px;
+    text-align: left;
 }
 
 .pexplainCard{
@@ -159,6 +176,7 @@ z-index: 1;
     display: flex;
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-left: calc((100% - 1720px)/2);
 }
 
 .cards1{
@@ -183,48 +201,6 @@ z-index: 1;
     text-align: center;
     color: #fff;
     font-size: 40px;
-}
-
-#portifolio{
-    width: 100%;
-    color: white;
-    padding-bottom: 20px;
-    padding-top: 70px;
-}
-
-#cardPort{
-    display: flex;
-    margin-top: 40px;
-    width: 100%;
-    margin-left: 5%;
-}
-
-#cardPortLeft{
-    width: 30%;
-}
-
-#clients{
-    padding-top: 110px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 110px;
-    width: 70%;
-    text-align: center;
-    border-radius: 10%;
-    overflow: hidden;
-    background-color: #01131f;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-#clients.show {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-.imgClient{
-    height: 200px;
 }
 
 #dLanguages{
@@ -265,11 +241,23 @@ z-index: 1;
 }
 
 .linguagem{
-    display: block;
+}
+
+#portifolio{
+    padding-top: 90px;
+}
+
+#cardPort{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.imgClient{
+    height: 200px;
 }
 
 #cardPortRight{
-    width: 70%;
+    width: 100%;
 }
 
 #clientSite{
@@ -277,28 +265,38 @@ z-index: 1;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-    width: 90%;
     text-align: center;
     border-radius: 15%;
     overflow: hidden;
-    opacity: 0;
     transform: translateY(50px);
-    transition: opacity 1.4s ease-out, transform 1.4s ease-out;
 }
 
-#clientSite.show {
-        opacity: 1;
-        transform: translateY(0);
-    }
 
 .imgSiteClient{
-    height: 620px;
-    border-radius: 5%;
+    width: 900px;
+    border-radius: 70px;
     overflow: hidden;
 }
 
+#nameClient{
+    background-image: linear-gradient(to bottom, #0147a6, #0068b2, #0297c2);
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 900px;
+    margin-left: calc((100% - 920px)/2);
+    border-radius: 100px;
+    margin-top: -105px;
+    margin-bottom: 70px;
+    position: absolute;
+}
+
+#pNameClient{
+    font-size: 70px;
+    font-family: "Arimo", sans-serif;
+}
+
 #equipe{
-    padding-top: 70px;
+    padding-top: 130px;
 }
 
 .divPerfil{
@@ -332,7 +330,10 @@ z-index: 1;
 }
 
 footer{
-    background-color: #090d19;
+    background-image: linear-gradient(to bottom, #090d19, #000);
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px
 }
 
 #contato{
@@ -340,27 +341,58 @@ footer{
     margin-top: 70px;
 }
 
+#TitleCtt{
+    margin-bottom: 80px;
+}
+
 .pContato{
-    font-size: 30px;
+    font-size: 40px;
     margin-left: 30px;
+    margin-bottom: 40px;
 }
 
 #allRights{
     padding-left: 60px;
     padding-right: 60px;
-    font-size: 30px;
+    font-size: 40px;
     padding-top: 60px;
 }
 
+#LogoInferior{
+    width: 45%;
+    margin-right: 5%;
+    text-align: center;
+}
+
+#LogoInferiorImg{
+    width: 400px;
+}
+
+#slogan{
+    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+}
+
+.slogan{
+    text-align: left;
+    padding-left: calc((100% - 400px) / 2);
+}
+
 #redes{
-    display: flex;
+    display: block;
     padding-left: 110px;
     margin: 30px;
+    margin-left: 5%;
+    width: 45%;
+}
+
+#contatoConj{
+    display: flex;
 }
 
 .imgRede{
     margin-left: 30px;
-    width: 80px;
+    width: 50px;
 }
 
 #whatsapp{
