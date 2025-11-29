@@ -38,40 +38,32 @@ header{
 
 .btnNav{
     list-style: none;
-    text-decoration: none;
     padding-left: 130px;
-    font-size: 25px;
 }
 
 .btnNav a{
     text-decoration: none;
-    list-style: none;
     font-size: 25px;
     font-family: "Montserrat", sans-serif;
     color: #01ACCA;
 }
 
 #banner{
-    padding-top: 70px;
+    padding-top: 80px;
     position: relative;
     z-index: 10;
     background-color:#090d19;
 }
 
 #TopoPagina{
-    position: relative;
     width: 100%;
 }
 
 #welcome{
     position: absolute;
     bottom: 550px;
-    z-index: 2;
+    z-index: 20;
     font-size: 50px;
-}
-
-.welcome{
-    color: white;
     margin-left: 65px;    
 }
 
@@ -164,10 +156,6 @@ main{
     font-family: "Open Sans", sans-serif;
 }
 
-.defaultMarginText{
-    margin-top: 500px;
-}
-
 #ExtraCards{
     display: flex;
     margin-top: 50px;
@@ -245,26 +233,18 @@ main{
     width: 100%;
 }
 
-.imgClient{
-    height: 200px;
-}
-
 #clientSite{
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
     text-align: center;
-    border-radius: 15%;
-    overflow: hidden;
     transform: translateY(50px);
 }
-
 
 .imgSiteClient{
     width: 900px;
     border-radius: 70px;
-    overflow: hidden;
 }
 
 #nameClient{

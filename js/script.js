@@ -75,10 +75,10 @@ const allPerfil = document.querySelector('.divPerfil')
 //adicionando uma string com as tags html em uma variavel com os dados manipulaveis indicados com "---" e "+++".
 let perfil = `
 <div class="divPerfil1">
-<div class="perfil">
-<img src="img/---.jpg" alt="---" class="imgPerfil">
-</div>
-<h3 class="nomeMembro">+++</h3>
+    <div class="perfil">
+        <img src="img/---.jpg" alt="---" class="imgPerfil">
+    </div>
+    <h3 class="nomeMembro">+++</h3>
 </div>
 `
 
@@ -180,7 +180,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     `
     
     //Capturando div do Portifólio do Html para manipulação.
-    const DivClient = document.querySelector('#cardPortRight')
+    const DivClient = document.querySelector('#cardPort')
     
     //armazenando o nome de todos os clientes
     let nameClient = ['ballerflix', 'cineclipse', 'tysche'];
@@ -197,7 +197,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     
         //Acrescentando 1 ao contador.
         cont++;
-    
+        
         //Verificando a posição do contador, caso seja a última imagem, este retornará para o início da contagem.
          if (cont == nameClient.length) {
         cont = 0;
