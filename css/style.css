@@ -14,10 +14,6 @@ html{
     scroll-behavior: smooth;    
 }
 
-main{
-z-index: 1;
-}
-
 header{            
     background-color: #090d19;
     width: 100%;
@@ -79,7 +75,8 @@ header{
     margin-left: 65px;    
 }
 
-#container{
+main{
+    z-index: 1;
     padding-top: 20px;
     padding-left: 70px;
     padding-right: 70px;
@@ -240,9 +237,6 @@ header{
     width: 150px;
 }
 
-.linguagem{
-}
-
 #portifolio{
     padding-top: 90px;
 }
@@ -250,14 +244,11 @@ header{
 #cardPort{
     margin-top: 40px;
     text-align: center;
+    width: 100%;
 }
 
 .imgClient{
     height: 200px;
-}
-
-#cardPortRight{
-    width: 100%;
 }
 
 #clientSite{
