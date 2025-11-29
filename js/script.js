@@ -112,10 +112,6 @@ for (let i = 0; i < languages.length; i++) {
     Language.innerHTML += `<img src="img/${l}.png" alt="${l}" class="Language">`  
 }
 
-
-
-
-
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 //Contatos
 
@@ -138,7 +134,6 @@ for (let i = 0; i < contatos[0].length; i++) {
     <div id="contatoConj"><a href="${contatos[2][i]}"><img src="img/${contatos[0][i]}.png" alt="${contatos[0][i]}" class="imgRede"></a>
     <a href="${contatos[2][i]}"><p class="pContato">${contatos[1][i]}</p></a></div>`
 }
-
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------*/
 //efeito de aparição
@@ -164,9 +159,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     cards.forEach(card => observer.observe(card));
     cards1.forEach(card => observer.observe(card));
     dLanguages.forEach(card => observer.observe(card));
-    
-    
-    
+      
     
     /*------------------------------------------------------------------------------------------------*/
     //Carrossel Portifólio
