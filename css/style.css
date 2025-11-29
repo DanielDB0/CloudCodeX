@@ -142,7 +142,6 @@ main{
     margin-right: 40px;
     width: 500px;
     border-radius: 10%;
-    overflow: hidden;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -169,7 +168,7 @@ main{
     margin-top: 500px;
 }
 
-#MoreCards{
+#ExtraCards{
     display: flex;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -182,7 +181,6 @@ main{
     margin-right: 40px;
     width: 500px;
     border-radius: 10%;
-    overflow: hidden;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;

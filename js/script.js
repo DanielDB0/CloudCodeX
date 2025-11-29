@@ -1,6 +1,4 @@
 //Missão, Visão e Valores
-
-
 //adicionando uma string com as tags html em uma variavel com os dados manipulaveis indicados com "---", "+++" e "###".
 let card = `
 <div class="cards">
@@ -66,62 +64,7 @@ for(let i = 0; i < ExtraCards.length; i++){
     }
 }
 
-/*-------------------------------------------------------------------------------------------------------------------------------------------*/
-//Linguagens
 
-//armazenando o nome de todas as linguagens em um array
-let languages = ['html','js','css', 'c', 'C-Sharp', 'c++', 'java', 'python']
-
-//Capturando div das linguagens do Html para manipulação.
-const Language = document.querySelector('#Languages')
-
-//Adicionando na div capturada anteriormente as imagens contidas no vetor "languages" a partir de seu nome.
-for (let i = 0; i < languages.length; i++) {
-    l = languages[i]
-    Language.innerHTML += `<img src="img/${l}.png" alt="${l}" class="Language">`  
-}
-
-/*------------------------------------------------------------------------------------------------*/
-//Carrossel Portifólio
-
-//adicionando uma string com as tags html em uma variavel com os dados manipulaveis indicados com "---" e "+++".
-let Client = `
-<div id="clientSite">
-    <img src="img/+++.png" alt="SITE ---" class="imgSiteClient"/>
-    <div id="nameClient"><b id="pNameClient">---</b></div>
-</div>
-`
-
-//Capturando div do Portifólio do Html para manipulação.
-const DivClient = document.querySelector('#cardPortRight')
-
-//armazenando o nome de todos os clientes
-let nameClient = ['ballerflix', 'cineclipse', 'tysche'];
-
-//inicializando variavel contadora e variavel com a definição do tempo.
-let cont = 0;
-let time = 5000;
-
-//Declarando a função do carrossel
-function slideShow() {
-
-    //Manipulando div do cliente para adicionar a tag "Client" substituindo os dados manipuláveis pelos valores do vetor "nameClient". 
-    DivClient.innerHTML = Client.replaceAll('---', nameClient[cont].toUpperCase()).replace('+++', nameClient[cont])
-
-    //Acrescentando 1 ao contador.
-    cont++;
-
-    //Verificando a posição do contador, caso seja a última imagem, este retornará para o início da contagem.
-     if (cont == nameClient.length) {
-    cont = 0;
-  }
-
-  //define o tempo para reexecução da função e passa o tempo definido na váriavel "time" anteriormente.
-  setTimeout('slideShow()', time);
-}
-
-//Inicialização da função de carrossel.
-slideShow();
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 //Equipe
@@ -155,6 +98,25 @@ for(let i = 0; i < 5; i++){
 
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
+//Linguagens
+
+//armazenando o nome de todas as linguagens em um array
+let languages = ['html','js','css', 'c', 'C-Sharp', 'c++', 'java', 'python']
+
+//Capturando div das linguagens do Html para manipulação.
+const Language = document.querySelector('#Languages')
+
+//Adicionando na div capturada anteriormente as imagens contidas no vetor "languages" a partir de seu nome.
+for (let i = 0; i < languages.length; i++) {
+    l = languages[i]
+    Language.innerHTML += `<img src="img/${l}.png" alt="${l}" class="Language">`  
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
 //Contatos
 
 //Criando um vetor bidimensional com os nomes das imagens, textos das formas de contato e sobrenomes links.
@@ -162,8 +124,8 @@ let contatos = [
     ['email', 'localizacao', 'instagram'],
     ['cloudcodexx@gmail.com', 'Av. Brig. Faria Lima, 8152 - Itaim Bibi', '@cloudcodexx'],
     ['mailto:cloudcodexx@gmail.com',
-    'https://www.google.com/maps/place/Av.+Brig.+Faria+Lima,+8152+-+Itaim+Bibi,+S%C3%A3o+Paulo+-+SP,+04538-133/@-23.5890257,-46.68386,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce574496c8b241:0x11f49cdc2643de13!8m2!3d-23.5890257!4d-46.6812851?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D',
-    'https://www.instagram.com/cloudcodexx/'
+        'https://www.google.com/maps/place/Av.+Brig.+Faria+Lima,+8152+-+Itaim+Bibi,+S%C3%A3o+Paulo+-+SP,+04538-133/@-23.5890257,-46.68386,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce574496c8b241:0x11f49cdc2643de13!8m2!3d-23.5890257!4d-46.6812851?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D',
+        'https://www.instagram.com/cloudcodexx/'
     ]
 ]
 
@@ -177,6 +139,7 @@ for (let i = 0; i < contatos[0].length; i++) {
     <a href="${contatos[2][i]}"><p class="pContato">${contatos[1][i]}</p></a></div>`
 }
 
+
 /*-------------------------------------------------------------------------------------------------------------------------------------------------*/
 //efeito de aparição
 
@@ -185,12 +148,12 @@ const cards = document.querySelectorAll('.cards');
 const cards1 = document.querySelectorAll('.cards1');
 const dLanguages = document.querySelectorAll('#dLanguages');
 
-    //criando o observador para identificar quando o elemento entrar em tela
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-
-            //verificando quando a tela entra e adiciona nova classe ao elemento capturado
-            if (entry.isIntersecting) {
+//criando o observador para identificar quando o elemento entrar em tela
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        
+        //verificando quando a tela entra e adiciona nova classe ao elemento capturado
+        if (entry.isIntersecting) {
                 entry.target.classList.add('show')
                 observer.unobserve(entry.target);
             }
@@ -201,3 +164,48 @@ const dLanguages = document.querySelectorAll('#dLanguages');
     cards.forEach(card => observer.observe(card));
     cards1.forEach(card => observer.observe(card));
     dLanguages.forEach(card => observer.observe(card));
+    
+    
+    
+    
+    /*------------------------------------------------------------------------------------------------*/
+    //Carrossel Portifólio
+    
+    //adicionando uma string com as tags html em uma variavel com os dados manipulaveis indicados com "---" e "+++".
+    let Client = `
+    <div id="clientSite">
+        <img src="img/+++.png" alt="SITE ---" class="imgSiteClient"/>
+        <div id="nameClient"><b id="pNameClient">---</b></div>
+    </div>
+    `
+    
+    //Capturando div do Portifólio do Html para manipulação.
+    const DivClient = document.querySelector('#cardPortRight')
+    
+    //armazenando o nome de todos os clientes
+    let nameClient = ['ballerflix', 'cineclipse', 'tysche'];
+    
+    //inicializando variavel contadora e variavel com a definição do tempo.
+    let cont = 0;
+    let time = 5000;
+    
+    //Declarando a função do carrossel
+    function slideShow() {
+    
+        //Manipulando div do cliente para adicionar a tag "Client" substituindo os dados manipuláveis pelos valores do vetor "nameClient". 
+        DivClient.innerHTML = Client.replaceAll('---', nameClient[cont].toUpperCase()).replace('+++', nameClient[cont])
+    
+        //Acrescentando 1 ao contador.
+        cont++;
+    
+        //Verificando a posição do contador, caso seja a última imagem, este retornará para o início da contagem.
+         if (cont == nameClient.length) {
+        cont = 0;
+      }
+    
+      //define o tempo para reexecução da função e passa o tempo definido na váriavel "time" anteriormente.
+      setTimeout('slideShow()', time);
+    }
+    
+    //Inicialização da função de carrossel.
+    slideShow();
